@@ -21,10 +21,7 @@
 <div class="container" id="page">
 
 	<div id="header">
-		<div id="logo"><h1><a href="<?php echo yii::app()->createAbsoluteUrl("site/index") ?> "><?php echo CHtml::encode(Yii::app()->name); ?>  </a></h1> </div>
-	</div><!-- header -->
-
-	<div id="mainmenu">
+            <div id="mainmenu">
 	<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'INICIO', 'url'=>array('site/index')),
@@ -36,6 +33,10 @@
 			),
 		)); ?>
 	</div><!-- mainmenu -->
+		<div id="logo"><h1><a href="<?php echo yii::app()->createAbsoluteUrl("site/index") ?> "><?php echo CHtml::encode(Yii::app()->name); ?>  </a></h1> </div>
+	</div><!-- header -->
+
+	
 	
 
 	<?php echo $content; ?>

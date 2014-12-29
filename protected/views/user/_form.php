@@ -9,11 +9,7 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'user-form',
 	'method'=>'post',
-	// Please note: When you enable ajax validation, make sure the corresponding
-	// controller action is handling ajax validation correctly.
-	// There is a call to performAjaxValidation() commented in generated controller code.
-	// See class documentation of CActiveForm for details on this.
-	'focus'=>array($model,'name_user'),
+        'focus'=>array($model,'name_user'),
 	'enableClientValidation'=>true,
 	'enableAjaxValidation'=>true,
 )); ?>
@@ -40,52 +36,54 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'name_user'); ?>
-		<?php echo $form->textField($model,'name_user',array('size'=>20,'maxlength'=>20)); ?>
-		<?php echo $form->error($model,'name_user'); ?>
+                <?php echo $form->error($model,'name_user'); ?>
+		<?php echo $form->textField($model,'name_user',array('size'=>20,'maxlength'=>20, 'class'=>'clear dBlock' )); ?>
+		
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'last_name_user'); ?>
-		<?php echo $form->textField($model,'last_name_user',array('size'=>30,'maxlength'=>30)); ?>
-		<?php echo $form->error($model,'last_name_user'); ?>
+                <?php echo $form->error($model,'last_name_user'); ?>
+		<?php echo $form->textField($model,'last_name_user',array('size'=>30,'maxlength'=>30, 'class'=>'clear dBlock')); ?>
+		
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'nick_user'); echo CHtml::link('i', '#', array('onclick'=>'$("#dialogNewUser").dialog("open"); return false;', "class"=>'aa' )); ;?>
-		<?php echo $form->textField($model,'nick_user',array('size'=>10,'maxlength'=>10)); ?>
+                <?php echo $form->labelEx($model,'nick_user'); echo CHtml::link('i', '#', array('onclick'=>'$("#dialogNewUser").dialog("open"); return false;', "class"=>'aa' )); ;?>
 		<?php echo $form->error($model,'nick_user'); ?>
+                <?php echo $form->textField($model,'nick_user',array('size'=>10,'maxlength'=>10, 'class'=>'clear dBlock')); ?>
+		
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'password_user'); ?>
-		<?php echo $form->passwordField($model,'password_user',array('size'=>40,'maxlength'=>40)); ?>
-		<?php echo $form->error($model,'password_user'); ?>
-		
-		
-
-	</div>
+                <?php echo $form->error($model,'password_user'); ?>
+		<?php echo $form->passwordField($model,'password_user',array('size'=>40,'maxlength'=>40, 'class'=>'clear dBlock')); ?>
+        </div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'repeat_password'); ?>
-		<?php echo $form->passwordField($model,'repeat_password',array('size'=>40,'maxlength'=>40)); ?>
-		<?php echo $form->error($model,'repeat_password'); ?>
-	</div>
+                <?php echo $form->error($model,'repeat_password'); ?>
+		<?php echo $form->passwordField($model,'repeat_password',array('size'=>40,'maxlength'=>40, 'class'=>'clear dBlock')); ?>
+        </div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'email_user'); ?>
-		<?php echo $form->textField($model,'email_user',array('size'=>40,'maxlength'=>40)); ?>
-		<?php echo $form->error($model,'email_user'); ?>
+                <?php echo $form->error($model,'email_user'); ?>
+		<?php echo $form->textField($model,'email_user',array('size'=>40,'maxlength'=>40, 'class'=>'clear dBlock')); ?>
+		
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'birthday_user'); ?>
+                <?php echo $form->error($model,'birthday_user'); ?>
 		<?php
 		  	$this->widget('zii.widgets.jui.CJuiDatePicker', array(
 		   'model'=>$model,
 		   'attribute'=>'birthday_user',
 		   'value'=>$model->birthday_user,
 		   'language' => 'es',
-		   'htmlOptions' => array('readonly'=>"readonly"),
+		   'htmlOptions' => array('readonly'=>"readonly,"),
 		   'options'=>array(
 		    'autoSize'=>true,
 		    'defaultDate'=>$model->birthday_user,
@@ -104,15 +102,15 @@
 		    ),
 		  )); 
 		?>
-		<?php echo $form->error($model,'birthday_user'); ?>
+		
 	</div>
 	
 	<?php if(CCaptcha::checkRequirements()): ?>
 	<div class="row">
-		<?php echo $form->labelEx($model,'verifyCode'); ?>
+		<?php echo $form->labelEx($model,'verifyCode', array('class'=>'verifyCode')); ?>
 		<div>
 		<?php $this->widget('CCaptcha'); ?>
-		<?php echo $form->textField($model,'verifyCode'); ?>
+		<?php echo $form->textField($model,'verifyCode', array('class'=>' clear dBlock') ); ?>
 		</div>
 		<?php echo $form->error($model,'verifyCode'); ?>
 	</div>

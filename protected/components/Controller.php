@@ -21,4 +21,6 @@ class Controller extends CController
 	 */
 	public $breadcrumbs=array();
 	public $backgroundBody = null;
+        public $user_app;
+        
 }

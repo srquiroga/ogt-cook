@@ -43,7 +43,7 @@ class User extends CActiveRecord
 			array('repeat_password', 'compare', 'compareAttribute'=>'password_user','on'=>'insert'),
 			array(array('name_user', 'last_name_user'), 'match','pattern'=>'/^[a-zA-ZáéíóúÁÉÍÓÚ]+$/'),
 			array('nick_user', 'match', 'pattern'=>'/^[a-zA-Z0-9_]+$/'),
-			array('email_user', 'email'),
+			array('email_user', 'email', ),
 			array('email_user', 'unique'),
 			array('nick_user', 'unique'),
 			array('new_password','safe'),
