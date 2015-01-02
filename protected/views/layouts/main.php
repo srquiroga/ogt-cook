@@ -12,6 +12,8 @@
 
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
+       
+        <script type="text/javascript" src="<?php echo yii::app()->request->baseUrl; ?>/js/main.js" /> </script>
 
 	
 </head>
@@ -33,7 +35,7 @@
 			),
 		)); ?>
 	</div><!-- mainmenu -->
-		<div id="logo"><h1><a href="<?php echo yii::app()->createAbsoluteUrl("site/index") ?> "><?php echo CHtml::encode(Yii::app()->name); ?>  </a></h1> </div>
+		<div id="logo"><h1><a class='enlaceSin' href="<?php echo yii::app()->createAbsoluteUrl("site/index") ?> "><?php echo CHtml::encode(Yii::app()->name); ?>  </a></h1> </div>
 	</div><!-- header -->
 
 	
@@ -44,9 +46,9 @@
 	<div class="clear"></div>
 
 	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
+		Copyright &copy; <?php echo date('Y'); ?> one great team software.<br/>
 		All Rights Reserved.<br/>
-		<?php echo Yii::powered(); ?>
+		
 	</div><!-- footer -->
 
 </div><!-- page -->

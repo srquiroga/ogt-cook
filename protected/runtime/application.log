@@ -902,3 +902,122 @@ REQUEST_URI=/ogt-cook/
 in C:\xampp\htdocs\ogt-cook\protected\views\user\create.php (18)
 in C:\xampp\htdocs\ogt-cook\protected\views\site\index.php (5)
 in C:\xampp\htdocs\ogt-cook\protected\controllers\SiteController.php (28)
+2015/01/02 12:10:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "nueva-receta"' in C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(141): CWebApplication->runController('nueva-receta')
+#1 C:\xampp\htdocs\ogt-cook\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\ogt-cook\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ogt-cook/nueva-receta
+---
+2015/01/02 12:10:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "nueva-receta"' in C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(141): CWebApplication->runController('nueva-receta')
+#1 C:\xampp\htdocs\ogt-cook\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\ogt-cook\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ogt-cook/nueva-receta
+---
+2015/01/02 12:10:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "nueva-receta"' in C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(141): CWebApplication->runController('nueva-receta')
+#1 C:\xampp\htdocs\ogt-cook\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\ogt-cook\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ogt-cook/nueva-receta
+---
+2015/01/02 12:15:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "nueva-receta" solicitada.' in C:\xampp\htdocs\ogt-cook\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(270): CController->missingAction('nueva-receta')
+#1 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(282): CController->run('nueva-receta')
+#2 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(141): CWebApplication->runController('recipe/nueva-re...')
+#3 C:\xampp\htdocs\ogt-cook\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ogt-cook\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ogt-cook/recipe/nueva-receta
+---
+2015/01/02 12:15:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "nueva-receta" solicitada.' in C:\xampp\htdocs\ogt-cook\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(270): CController->missingAction('nueva-receta')
+#1 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(282): CController->run('nueva-receta')
+#2 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(141): CWebApplication->runController('recipe/nueva-re...')
+#3 C:\xampp\htdocs\ogt-cook\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ogt-cook\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ogt-cook/recipe/nueva-receta
+---
+2015/01/02 12:18:28 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`ogtcook`.`recipe`, CONSTRAINT `prueba` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). La sentencia SQL ejecutada fue: INSERT INTO `recipe` (`title_recipe`, `season_recipe`, `category_recipe`, `tag_type_recipe`, `tag_extra`, `time_recipe`, `number_person_recipe`, `type_kitchen_recipe`, `ingredients_recipe`, `making_recipe`, `extras_recipe`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10).
+in C:\xampp\htdocs\ogt-cook\protected\controllers\RecipeController.php (66)
+in C:\xampp\htdocs\ogt-cook\index.php (13)
+2015/01/02 12:18:28 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`ogtcook`.`recipe`, CONSTRAINT `prueba` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `recipe` (`title_recipe`, `season_recipe`, `category_recipe`, `tag_type_recipe`, `tag_extra`, `time_recipe`, `number_person_recipe`, `type_kitchen_recipe`, `ingredients_recipe`, `making_recipe`, `extras_recipe`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)' in C:\xampp\htdocs\ogt-cook\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\ogt-cook\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\ogt-cook\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\ogt-cook\protected\controllers\RecipeController.php(66): CActiveRecord->save()
+#3 C:\xampp\htdocs\ogt-cook\framework\web\actions\CInlineAction.php(49): RecipeController->actionCreate()
+#4 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\ogt-cook\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\ogt-cook\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\ogt-cook\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\ogt-cook\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(141): CWebApplication->runController('recipe/create')
+#14 C:\xampp\htdocs\ogt-cook\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\ogt-cook\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/ogt-cook/nueva-receta
+HTTP_REFERER=http://localhost/ogt-cook/nueva-receta
+---
+2015/01/02 15:57:19 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`ogtcook`.`recipe`, CONSTRAINT `prueba` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). La sentencia SQL ejecutada fue: INSERT INTO `recipe` (`id`) VALUES (NULL).
+in C:\xampp\htdocs\ogt-cook\protected\controllers\RecipeController.php (72)
+in C:\xampp\htdocs\ogt-cook\index.php (13)
+2015/01/02 15:57:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`ogtcook`.`recipe`, CONSTRAINT `prueba` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `recipe` (`id`) VALUES (NULL)' in C:\xampp\htdocs\ogt-cook\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\ogt-cook\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\ogt-cook\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\ogt-cook\protected\controllers\RecipeController.php(72): CActiveRecord->save()
+#3 C:\xampp\htdocs\ogt-cook\framework\web\actions\CInlineAction.php(49): RecipeController->actionCreate()
+#4 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\ogt-cook\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\ogt-cook\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\ogt-cook\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\ogt-cook\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(141): CWebApplication->runController('recipe/create')
+#14 C:\xampp\htdocs\ogt-cook\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\ogt-cook\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/ogt-cook/nueva-receta
+HTTP_REFERER=http://localhost/ogt-cook/nueva-receta
+---
+2015/01/02 15:57:20 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`ogtcook`.`recipe`, CONSTRAINT `prueba` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). La sentencia SQL ejecutada fue: INSERT INTO `recipe` (`id`) VALUES (NULL).
+in C:\xampp\htdocs\ogt-cook\protected\controllers\RecipeController.php (72)
+in C:\xampp\htdocs\ogt-cook\index.php (13)
+2015/01/02 15:57:20 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`ogtcook`.`recipe`, CONSTRAINT `prueba` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `recipe` (`id`) VALUES (NULL)' in C:\xampp\htdocs\ogt-cook\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\ogt-cook\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\ogt-cook\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\ogt-cook\protected\controllers\RecipeController.php(72): CActiveRecord->save()
+#3 C:\xampp\htdocs\ogt-cook\framework\web\actions\CInlineAction.php(49): RecipeController->actionCreate()
+#4 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\ogt-cook\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\ogt-cook\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\ogt-cook\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\ogt-cook\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(141): CWebApplication->runController('recipe/create')
+#14 C:\xampp\htdocs\ogt-cook\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\ogt-cook\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/ogt-cook/nueva-receta
+HTTP_REFERER=http://localhost/ogt-cook/nueva-receta
+---

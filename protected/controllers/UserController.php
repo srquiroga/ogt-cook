@@ -20,7 +20,7 @@ class UserController extends Controller
     public function filters()
     {
         return array(
-            'accessControl',
+            'accessControl'
 
         );
     }

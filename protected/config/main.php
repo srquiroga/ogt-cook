@@ -36,6 +36,7 @@ return array(
 				'/contacto'=>'site/contact',
                                 'panel-de-control'=>'user/admin',
                                 '/nuevo-usuario'=>'user/create',
+                                '/nueva-receta'=>'recipe/create',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
