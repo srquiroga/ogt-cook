@@ -40,8 +40,11 @@
 
 	
 	
-
-	<?php echo $content; ?>
+        <div>
+            <?php echo 'Commit de prueba' ?>
+            <?php echo $content; ?>
+        </div>
+	
 
 	<div class="clear"></div>
 
