@@ -16,7 +16,7 @@
     
         <div class="row">
 		<?php echo $form->labelEx($model,'season_recipe'); ?>
-		<?php echo $form->dropDownList($model,'season_recipe',array(''=>'', 'winter'=>'Invierno', 'spring'=>'Primavera', 'summer'=>'Verano', 'automn'=>'otoño','year'=>'Todo el año',  )); ?>
+		<?php echo $form->dropDownList($model,'season_recipe',array(''=>'', 'Invierno'=>'Invierno', 'primavera'=>'Primavera', 'Verano'=>'Verano', 'Otoño'=>'otoño','Todo el año'=>'Todo el año',  )); ?>
 		<?php echo $form->error($model,'season_recipe'); ?>
 	</div>
 

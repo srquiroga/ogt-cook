@@ -19,13 +19,23 @@ class SiteController extends Controller {
         );
     }
     public function actionIndex() {
-          Yii::app()->clientScript->registerMetaTag('recetas, cocina, gastronomia, ogt-cook ', 'keywords', null, array('id' => 'keywords'), 'meta_keywords');
+        Yii::app()->clientScript->registerMetaTag('recetas, cocina, gastronomia, ogt-cook ', 'keywords', null, array('id' => 'keywords'), 'meta_keywords');
         Yii::app()->clientScript->registerMetaTag('Con esta plicacion podra cocinar, divertirse, hacer amigos', 'description', null, array('id' => 'description'), 'meta_description');
         $this->backgroundBody = 'inicio';
         $this->pageTitle = "recetas cocina gastronomia | " . Yii::app()->name; 
          $this->layout = 'column1';
+         
+         /*$criteria = CDbCriteria;
+         $criteria->compare('id',$this->id,true);*/
+         $model =  Recipe::model();
+         
+         /*$dataProvider=new CActiveDataProvider($model, array('criteria'=>$criteria));
+		$this->render('index', 
+                                array( 'dataProvider'=>$dataProvider)
+                                
+        );*/
      
-        $this->render('index');
+        $this->render('index', array('model'=>$model));
       
        
     }

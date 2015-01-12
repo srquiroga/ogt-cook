@@ -42,7 +42,19 @@ class RecipeController extends Controller
 	
 	public function actionView($id)
 	{
-		$this->render('view',array(
+             $this->layout='column1';
+             $title_recipe = $this->loadModel($id)->title_recipe;
+             $category_recipe = $this->loadModel($id)->category_recipe;
+             $tag_type_recipe = $this->loadModel($id)->tag_type_recipe;
+             $author_recipe = $this->loadModel($id)->author_recipe;
+             
+                Yii::app()->clientScript->registerMetaTag( $title_recipe." , ". $category_recipe." , " . $tag_type_recipe , 'keywords', null, array('id'=>'keywords'), 'meta_keywords');
+                Yii::app()->clientScript->registerMetaTag($category_recipe,
+                'description', null, array('id'=>'description'), 'meta_description');
+                $this->backgroundBody = 'nuevaReceta form';
+                $this->pageTitle=" $title_recipe  por $author_recipe  | ". Yii::app()->name;
+            
+            $this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
 	}
@@ -51,6 +63,7 @@ class RecipeController extends Controller
 	public function actionCreate()
 	{
 		$model=new Recipe;
+              
                 $this->layout='column1';
                 Yii::app()->clientScript->registerMetaTag('Nuevo receta, ogt-cook', 'keywords', null, array('id'=>'keywords'), 'meta_keywords');
                 Yii::app()->clientScript->registerMetaTag('ogt-cook proporciona este espacio para que pueda crear sus nuevas recetas de forma facil',
@@ -63,13 +76,41 @@ class RecipeController extends Controller
 		$user = User::model()->findByPk($id_user);
 	
                 $this->performAjaxValidation($model);
+                
+              
 		
                 if(isset($_POST['Recipe']))
 		{
 			$model->attributes=$_POST['Recipe'];
                         $model->author_recipe = $user->nick_user;
 			$model->id_user= $user->id;
+                        $ingredientes = str_split($model->ingredients_recipe);
+                        $extras = str_split($model->extras_recipe);
+                        $preparacion = str_split($model->making_recipe);
+                        $controlIngredientes = array_diff($ingredientes, $extras);
+                        $controlPreparacion = array_diff($ingredientes, $preparacion);
+                        
+                        if($model->category_recipe !=="" ||$model->category_recipe !==null )
+                            $user->points_user = $user->points_user+1; 
+                        if($model->season_recipe !=="" || $model->season_recipe !== null)
+                            $user->points_user = $user->points_user+1;
+                        if($model->tag_type_recipe !=="" || $model->tag_type_recipe !== null)
+                            $user->points_user = $user->points_user+1;
+                        if($model->tag_extra !=="" || $model->tag_extra !==null)
+                            $user->points_user = $user->points_user+1;
+                        if($model->time_recipe !== ""|| $model->time_recipe !== null)
+                            $user->points_user = $user->points_user+1;
+                        if($model->number_person_recipe !== ""|| $model->number_person_recipe !==null)
+                            $user->points_user = $user->points_user+1;
+                        if($model->type_kitchen_recipe !== "" || $model->type_kitchen_recipe !== null)
+                            $user->points_user = $user->points_user+1;
+                        if(count($ingredientes)!== count($controlIngredientes))
+                            $user->points_user = $user->points_user+1;
+                        if(count($preparacion)!==count($controlPreparacion))
+                             $user->points_user = $user->points_user+1;
+                        
 			if($model->save())
+                                $user->save();
 				$this->redirect(array('view','id'=>$model->id));
 		}
 
@@ -110,10 +151,14 @@ class RecipeController extends Controller
 	
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Recipe');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-		));
+                $this->layout='column1';
+                $model = new Recipe;
+            
+                $dataProvider=new CActiveDataProvider($model );
+		$this->render('index', 
+                                array( 'dataProvider'=>$dataProvider)
+                                
+                        );
 	}
 
 	public function actionAdmin()

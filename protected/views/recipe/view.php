@@ -16,7 +16,78 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Recipe #<?php echo $model->id; ?></h1>
+<h2><?php echo $model->title_recipe. " por ".$model->author_recipe ?></h2>
+<div class='recipeView'>
+    
+    <div class='ingredientsView'>
+        <h3><?php echo $model->getAttributeLabel('ingredients_recipe') ?></h3>
+         <?php /*echo $model->ingredients_recipe; */
+        
+        $ingredientes = preg_split('/\n/', $model->ingredients_recipe);
+        array_pop($ingredientes);
+        
+        echo '<ul>';
+        foreach ($ingredientes as $value) {
+            
+            echo '<li>'.$value.'</li>';
+        }
+        echo '</li>';      
+        ?>        
+    </div>
+    
+    <div class='tagView'>
+        <h3>Etiquetas </h3>
+        
+        <table>
+            
+            <thead></thead>
+            <tfoot></tfoot>
+            <tbody>
+                <tr>
+                    <th>Temporada</th>
+                    <td><?php echo $model->season_recipe ?> </td>
+                </tr> 
+                
+                <tr>
+                    <th>Categoria</th>
+                    <td><?php echo $model->category_recipe ?> </td>
+                </tr>
+                
+                <tr>
+                    <th>Tipo de plato</th>
+                    <td><?php echo $model->tag_type_recipe ?> </td>
+                </tr>
+                
+                <tr>
+                    <th>Pensada para </th>
+                    <td><?php echo $model->tag_extra ?> </td>
+                </tr>
+                
+                <tr>
+                    <th>Tiempo de preparación</th>
+                    <td><?php echo $model->time_recipe ?> min </td>
+                </tr> 
+                
+                <tr>
+                    <th>Numero de comenzales</th>
+                    <td><?php echo $model->number_person_recipe ?> </td>
+                </tr>
+                
+                <tr>
+                    <th>Tipo de cocina</th>
+                    <td><?php echo $model->type_kitchen_recipe ?> </td>
+                </tr> 
+                
+            </tbody>
+        </table>
+    </div>
+    
+    <div class='makingView'>
+        <p> <?php echo $model->making_recipe ?> </p>
+    </div>
+
+</div>
+
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

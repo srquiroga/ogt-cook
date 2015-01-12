@@ -37,6 +37,7 @@ return array(
                                 'panel-de-control'=>'user/admin',
                                 '/nuevo-usuario'=>'user/create',
                                 '/nueva-receta'=>'recipe/create',
+                                '/receta/id '=>'recipe/view',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',

@@ -30,7 +30,7 @@ class Recipe extends CActiveRecord
     public $measure = null;
     public $quantity = null;
     public $one_ingredient = null;
-  
+   
 	
 	public function tableName()
 	{
