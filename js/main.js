@@ -1,6 +1,7 @@
 jQuery(document).ready(function($) {
 	
 
+	
 	$('#btnAddIngredients').click(function(event) {
 		
          
@@ -29,7 +30,13 @@ jQuery(document).ready(function($) {
    
             $('#areaIngredientes').removeAttr('readonly');
         });*/
-
+    
+ 	
+	$('#aa').click(function(){
+		
+		$('#subNav').toggle(1000);
+	});
+ 	
 });
 
 

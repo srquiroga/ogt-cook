@@ -83,31 +83,23 @@ $this->menu=array(
     </div>
     
     <div class='makingView'>
+        <h3>Preparación</h3>
         <p> <?php echo $model->making_recipe ?> </p>
+    </div>
+    
+    <div class='extraView'>
+        
+        <h3>Extras</h3>
+        <p><?php echo $model->extras_recipe ?> </p>
+        
+    </div>
+    
+    <div class='searchView'>
+        <h3>Buscar mas recetas</h3>
+        <a class="buscar" href="<?php echo yii::app()->createAbsoluteUrl('recipe/admin') ?>"> Busqueda de recetas</a>
+        <a class="nueva" href="<?php echo yii::app()->createAbsoluteUrl('recipe/create') ?>">Nueva receta</a>
     </div>
 
 </div>
 
 
-<?php $this->widget('zii.widgets.CDetailView', array(
-	'data'=>$model,
-	'attributes'=>array(
-		'id',
-		'id_user',
-		'title_recipe',
-		'author_recipe',
-		'season_recipe',
-		'category_recipe',
-		'time_recipe',
-		'ingredients_recipe',
-		'making_recipe',
-		'valoration_recipe',
-		'date_register_recipe',
-		'extras_recipe',
-		'number_person_recipe',
-		'type_kitchen_recipe',
-		'times_vote_recipe',
-		'tag_type_recipe',
-		'tag_extra',
-	),
-)); ?>

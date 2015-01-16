@@ -23,8 +23,8 @@ class SiteController extends Controller {
         Yii::app()->clientScript->registerMetaTag('Con esta plicacion podra cocinar, divertirse, hacer amigos', 'description', null, array('id' => 'description'), 'meta_description');
         $this->backgroundBody = 'inicio';
         $this->pageTitle = "recetas cocina gastronomia | " . Yii::app()->name; 
-         $this->layout = 'column1';
-         
+         $this->layout = 'columnIndex';
+          yii::app()->clientScript->registerScript("jquery", ""); 
          /*$criteria = CDbCriteria;
          $criteria->compare('id',$this->id,true);*/
          $model =  Recipe::model();

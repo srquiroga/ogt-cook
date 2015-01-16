@@ -10,7 +10,7 @@ class UserController extends Controller
                 'captcha'=>array(
                 'class'=>'CCaptchaAction',
                 'backColor'=>0xFFFFFF,
-                'transparent'=>true,
+                
 
                 ),
 
@@ -75,6 +75,9 @@ class UserController extends Controller
 
     public function actionView($id)
     {
+         $this->backgroundBody = 'perfilUsuario';
+          $this->pageTitle="Perfil | ". Yii::app()->name;
+        
         $this->render('view',array(
                 'model'=>$this->loadModel($id),
         ));
@@ -199,7 +202,7 @@ class UserController extends Controller
 
     public function actionUpdate($id)
     {
-        $this->backgroundBody ='update';
+        $this->backgroundBody ='update form';
         $this->layout='column1';
         Yii::app()->clientScript->registerMetaTag('Actualiza datos', 'keywords', null, array('id'=>'keywords'), 'meta_keywords');
         Yii::app()->clientScript->registerMetaTag('Actualice sus datos de forma segura',
@@ -234,10 +237,13 @@ class UserController extends Controller
 
         public function actionIndex()
         {
-                $dataProvider=new CActiveDataProvider('User');
-                $this->render('index',array(
-                        'dataProvider'=>$dataProvider,
-                ));
+             $this->backgroundBody ='listaUsuarios';
+            $this->layout='column1';
+            $this->pageTitle="Lista de usuarios | ". Yii::app()->name;
+            $dataProvider=new CActiveDataProvider('User');
+            $this->render('index',array(
+                    'dataProvider'=>$dataProvider,
+            ));
         }
         public function actionNotification(){
                 $this->render("notification");
@@ -245,7 +251,8 @@ class UserController extends Controller
 
 
         public function actionAdmin()
-        {
+        {   $this->backgroundBody ='userAdmin';
+            $this->pageTitle="Panel de control | usuarios | ". Yii::app()->name;
             $model=new User('search');
             $model->unsetAttributes();  // clear any default values
             if(isset($_GET['User']))

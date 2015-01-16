@@ -16,7 +16,16 @@ $this->menu=array(
 
 <h1>Recetas</h1>
 
-<?php $this->widget('zii.widgets.CListView', array(
+<div class='searchView'>
+    
+    <a class="buscar" href="<?php echo yii::app()->createAbsoluteUrl('recipe/admin') ?>"> buscar recetas</a>
+    <a class="nueva" href="<?php echo yii::app()->createAbsoluteUrl('recipe/create') ?>">Nueva receta</a>
+</div>
+
+<div class="listView hidden dBlock">
+    <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',
 )); ?>
+</div>
+

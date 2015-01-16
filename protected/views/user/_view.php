@@ -28,7 +28,7 @@
 	<?php echo CHtml::encode($data->birthday_user); ?>
 	<br />
 
-	<?php /*
+	
 	<b><?php echo CHtml::encode($data->getAttributeLabel('date_register')); ?>:</b>
 	<?php echo CHtml::encode($data->date_register); ?>
 	<br />
@@ -49,6 +49,6 @@
 	<?php echo CHtml::encode($data->activation_code); ?>
 	<br />
 
-	*/ ?>
+
 
 </div>

@@ -2988,3 +2988,302 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/ogt-cook/recipe/manager
 ---
+2015/01/13 10:55:07 [error] [exception.CException] exception 'CException' with message 'La propiedad "CMenu"."0" no se encuentra definida.' in C:\xampp\htdocs\ogt-cook\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\ogt-cook\framework\web\CWidgetFactory.php(161): CComponent->__set('0', Array)
+#1 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'zii.widgets.CMe...', Array)
+#2 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CMe...', Array)
+#3 C:\xampp\htdocs\ogt-cook\protected\views\layouts\main.php(37): CBaseController->widget('zii.widgets.CMe...', Array)
+#4 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\ogt-cook\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\ogt-cook\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#8 C:\xampp\htdocs\ogt-cook\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#9 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 C:\xampp\htdocs\ogt-cook\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#12 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(784): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#15 C:\xampp\htdocs\ogt-cook\protected\controllers\SiteController.php(38): CController->render('index', Array)
+#16 C:\xampp\htdocs\ogt-cook\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#17 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(282): CController->run('index')
+#21 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#22 C:\xampp\htdocs\ogt-cook\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\ogt-cook\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/ogt-cook/
+HTTP_REFERER=http://localhost/ogt-cook/
+---
+2015/01/13 11:56:20 [error] [exception.CException] exception 'CException' with message 'La propiedad "CMenu"."subMenuOptions" no se encuentra definida.' in C:\xampp\htdocs\ogt-cook\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\ogt-cook\framework\web\CWidgetFactory.php(161): CComponent->__set('subMenuOptions', Array)
+#1 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'zii.widgets.CMe...', Array)
+#2 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CMe...', Array)
+#3 C:\xampp\htdocs\ogt-cook\protected\views\layouts\main.php(50): CBaseController->widget('zii.widgets.CMe...', Array)
+#4 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\ogt-cook\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\ogt-cook\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#8 C:\xampp\htdocs\ogt-cook\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#9 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 C:\xampp\htdocs\ogt-cook\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#12 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(784): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#15 C:\xampp\htdocs\ogt-cook\protected\controllers\SiteController.php(38): CController->render('index', Array)
+#16 C:\xampp\htdocs\ogt-cook\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#17 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(282): CController->run('')
+#21 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(141): CWebApplication->runController('site')
+#22 C:\xampp\htdocs\ogt-cook\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\ogt-cook\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/ogt-cook/site/
+HTTP_REFERER=http://localhost/ogt-cook/
+---
+2015/01/13 12:40:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\ogt-cook\protected\controllers\RecipeController.php:181
+Stack trace:
+#0 C:\xampp\htdocs\ogt-cook\protected\controllers\RecipeController.php(46): RecipeController->loadModel('')
+#1 [internal function]: RecipeController->actionView('')
+#2 C:\xampp\htdocs\ogt-cook\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(RecipeController), Array)
+#3 C:\xampp\htdocs\ogt-cook\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(RecipeController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\ogt-cook\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\ogt-cook\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\ogt-cook\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\ogt-cook\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(141): CWebApplication->runController('recipe/view')
+#14 C:\xampp\htdocs\ogt-cook\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\ogt-cook\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/ogt-cook/receta/id%20?id=
+HTTP_REFERER=http://localhost/ogt-cook/nueva-receta
+---
+2015/01/13 12:55:48 [error] [php] Missing argument 2 for CClientScript::registerScript(), called in C:\xampp\htdocs\ogt-cook\protected\views\layouts\main.php on line 73 and defined (C:\xampp\htdocs\ogt-cook\framework\web\CClientScript.php:676)
+Stack trace:
+#0 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#1 C:\xampp\htdocs\ogt-cook\framework\web\widgets\CContentDecorator.php(76): SiteController->renderFile()
+#2 C:\xampp\htdocs\ogt-cook\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#3 C:\xampp\htdocs\ogt-cook\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(206): CContentDecorator->run()
+#5 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(300): SiteController->endWidget()
+#6 C:\xampp\htdocs\ogt-cook\protected\views\layouts\column1.php(6): SiteController->endContent()
+#7 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(126): require()
+#8 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#9 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(784): SiteController->renderFile()
+#10 C:\xampp\htdocs\ogt-cook\protected\controllers\SiteController.php(38): SiteController->render()
+#11 C:\xampp\htdocs\ogt-cook\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#12 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(286): SiteController->runAction()
+#14 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#15 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(282): SiteController->run()
+#16 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 C:\xampp\htdocs\ogt-cook\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\ogt-cook\index.php(13): CWebApplication->run()
+REQUEST_URI=/ogt-cook/
+in C:\xampp\htdocs\ogt-cook\protected\views\layouts\main.php (73)
+in C:\xampp\htdocs\ogt-cook\protected\views\layouts\column1.php (6)
+in C:\xampp\htdocs\ogt-cook\protected\controllers\SiteController.php (38)
+2015/01/14 10:24:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "admin"' in C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(141): CWebApplication->runController('admin')
+#1 C:\xampp\htdocs\ogt-cook\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\ogt-cook\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ogt-cook/admin
+---
+2015/01/14 11:01:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "panel-de-control/recetas"' in C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(141): CWebApplication->runController('panel-de-contro...')
+#1 C:\xampp\htdocs\ogt-cook\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\ogt-cook\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ogt-cook/panel-de-control/recetas
+---
+2015/01/14 11:05:57 [error] [exception.CException] exception 'CException' with message 'La propiedad "CWebUser"."isAdmin" no se encuentra definida.' in C:\xampp\htdocs\ogt-cook\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\ogt-cook\framework\web\auth\CWebUser.php(146): CComponent->__get('isAdmin')
+#1 C:\xampp\htdocs\ogt-cook\protected\views\layouts\main.php(43): CWebUser->__get('isAdmin')
+#2 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\ogt-cook\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\ogt-cook\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#6 C:\xampp\htdocs\ogt-cook\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#7 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(206): COutputProcessor->run()
+#8 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#9 C:\xampp\htdocs\ogt-cook\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#10 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(784): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\ogt-cook\protected\controllers\SiteController.php(38): CController->render('index', Array)
+#14 C:\xampp\htdocs\ogt-cook\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#15 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(282): CController->run('index')
+#19 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#20 C:\xampp\htdocs\ogt-cook\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\ogt-cook\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/ogt-cook/
+HTTP_REFERER=http://localhost/ogt-cook/recetas/busqueda-avanzada
+---
+2015/01/14 11:05:58 [error] [exception.CException] exception 'CException' with message 'La propiedad "CWebUser"."isAdmin" no se encuentra definida.' in C:\xampp\htdocs\ogt-cook\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\ogt-cook\framework\web\auth\CWebUser.php(146): CComponent->__get('isAdmin')
+#1 C:\xampp\htdocs\ogt-cook\protected\views\layouts\main.php(43): CWebUser->__get('isAdmin')
+#2 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\ogt-cook\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\ogt-cook\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#6 C:\xampp\htdocs\ogt-cook\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#7 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(206): COutputProcessor->run()
+#8 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#9 C:\xampp\htdocs\ogt-cook\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#10 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\ogt-cook\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(784): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\ogt-cook\protected\controllers\SiteController.php(38): CController->render('index', Array)
+#14 C:\xampp\htdocs\ogt-cook\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#15 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(282): CController->run('index')
+#19 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#20 C:\xampp\htdocs\ogt-cook\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\ogt-cook\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/ogt-cook/
+HTTP_REFERER=http://localhost/ogt-cook/recetas/busqueda-avanzada
+---
+2015/01/15 13:13:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "encimera.jpg"' in C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(141): CWebApplication->runController('encimera.jpg')
+#1 C:\xampp\htdocs\ogt-cook\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\ogt-cook\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ogt-cook/encimera.jpg
+HTTP_REFERER=http://localhost/ogt-cook/css/main.css
+---
+2015/01/15 13:35:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/tabaCocina.png"' in C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(141): CWebApplication->runController('images/tabaCoci...')
+#1 C:\xampp\htdocs\ogt-cook\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\ogt-cook\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ogt-cook/images/tabaCocina.png
+HTTP_REFERER=http://localhost/ogt-cook/css/main.css
+---
+2015/01/15 13:35:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/tabaCocina.png"' in C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(141): CWebApplication->runController('images/tabaCoci...')
+#1 C:\xampp\htdocs\ogt-cook\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\ogt-cook\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ogt-cook/images/tabaCocina.png
+HTTP_REFERER=http://localhost/ogt-cook/css/main.css
+---
+2015/01/15 13:36:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/tabaCocina.png"' in C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(141): CWebApplication->runController('images/tabaCoci...')
+#1 C:\xampp\htdocs\ogt-cook\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\ogt-cook\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ogt-cook/images/tabaCocina.png
+---
+2015/01/15 13:36:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/tabaCocina.png"' in C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(141): CWebApplication->runController('images/tabaCoci...')
+#1 C:\xampp\htdocs\ogt-cook\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\ogt-cook\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ogt-cook/images/tabaCocina.png
+---
+2015/01/15 15:59:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "recetas"' in C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(141): CWebApplication->runController('recetas')
+#1 C:\xampp\htdocs\ogt-cook\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\ogt-cook\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ogt-cook/recetas
+---
+2015/01/15 16:28:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "images/filete80"' in C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(141): CWebApplication->runController('images/filete80')
+#1 C:\xampp\htdocs\ogt-cook\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\ogt-cook\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ogt-cook/images/filete80
+HTTP_REFERER=http://localhost/ogt-cook/css/main.css
+---
+2015/01/15 17:18:17 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\ogt-cook\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\ogt-cook\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\ogt-cook\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\ogt-cook\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\ogt-cook\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(141): CWebApplication->runController('recipe/admin')
+#9 C:\xampp\htdocs\ogt-cook\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\ogt-cook\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ogt-cook/recetas/busqueda-avanzada
+HTTP_REFERER=http://localhost/ogt-cook/receta/id%20?id=8
+---
+2015/01/15 17:18:52 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in C:\xampp\htdocs\ogt-cook\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\ogt-cook\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\ogt-cook\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\ogt-cook\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\ogt-cook\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(141): CWebApplication->runController('recipe/admin')
+#9 C:\xampp\htdocs\ogt-cook\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\ogt-cook\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ogt-cook/recipe/admin
+---
+2015/01/15 17:20:55 [error] [exception.CException] exception 'CException' with message 'La propiedad "CAccessRule"."user" no se encuentra definida.' in C:\xampp\htdocs\ogt-cook\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\ogt-cook\framework\web\auth\CAccessControlFilter.php(115): CComponent->__set('user', Array)
+#1 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(1144): CAccessControlFilter->setRules(Array)
+#2 C:\xampp\htdocs\ogt-cook\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#3 C:\xampp\htdocs\ogt-cook\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(291): CFilterChain->run()
+#5 C:\xampp\htdocs\ogt-cook\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(282): CController->run('admin')
+#7 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(141): CWebApplication->runController('recipe/admin')
+#8 C:\xampp\htdocs\ogt-cook\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\ogt-cook\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/ogt-cook/recipe/admin
+---
+2015/01/15 18:19:11 [warning] [application] Error al establecer unsafe al atributo "id" de "Recipe".
+in C:\xampp\htdocs\ogt-cook\protected\controllers\RecipeController.php (174)
+in C:\xampp\htdocs\ogt-cook\index.php (13)
+2015/01/15 21:38:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "css/images/filete80.png"' in C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\ogt-cook\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/file...')
+#1 C:\xampp\htdocs\ogt-cook\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\ogt-cook\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ogt-cook/css/images/filete80.png
+HTTP_REFERER=http://localhost/ogt-cook/css/main.css
+---

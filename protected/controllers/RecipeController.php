@@ -29,9 +29,13 @@ class RecipeController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'actions'=>array('admin'),
+				'users'=>array('*'),
 			),
+                        array('allow',
+                                'actions'=>array('delete'),
+                                'users'=>array('admin'),
+                            ),
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),
@@ -51,7 +55,7 @@ class RecipeController extends Controller
                 Yii::app()->clientScript->registerMetaTag( $title_recipe." , ". $category_recipe." , " . $tag_type_recipe , 'keywords', null, array('id'=>'keywords'), 'meta_keywords');
                 Yii::app()->clientScript->registerMetaTag($category_recipe,
                 'description', null, array('id'=>'description'), 'meta_description');
-                $this->backgroundBody = 'nuevaReceta form';
+                $this->backgroundBody = 'receta';
                 $this->pageTitle=" $title_recipe  por $author_recipe  | ". Yii::app()->name;
             
             $this->render('view',array(
@@ -153,6 +157,7 @@ class RecipeController extends Controller
 	{
                 $this->layout='column1';
                 $model = new Recipe;
+                $this->backgroundBody = 'listaRecetas';
             
                 $dataProvider=new CActiveDataProvider($model );
 		$this->render('index', 
@@ -163,14 +168,20 @@ class RecipeController extends Controller
 
 	public function actionAdmin()
 	{
-		$model=new Recipe('search');
-		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Recipe']))
-			$model->attributes=$_GET['Recipe'];
+            Yii::app()->clientScript->registerMetaTag('recetas, filtro, busqueda, titulo, ingrediente ,ogt-cook', 'keywords', null, array('id'=>'keywords'), 'meta_keywords');
+            Yii::app()->clientScript->registerMetaTag('Busque las distintas recetas que tiene la aplicacion y use los filtros para que sea mas facil',
+            'description', null, array('id'=>'description'), 'meta_description');
+            $this->backgroundBody = 'busquedaRecetas';
+            $this->pageTitle="Busqueda | Recetas | ". Yii::app()->name;
+            
+            $model=new Recipe('search');
+            $model->unsetAttributes();  // clear any default values
+            if(isset($_GET['Recipe']))
+                $model->attributes=$_GET['Recipe'];
 
-		$this->render('admin',array(
-			'model'=>$model,
-		));
+            $this->render('admin',array(
+                    'model'=>$model,
+            ));
 	}
 
 	

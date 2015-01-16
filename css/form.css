@@ -131,6 +131,21 @@ div.wide.form .buttons, div.wide.form .hint, div.wide.form .errorMessage
 }
 
 /*dqg*/
+body.form{
+	
+	background: url('../images/plato.png'), url('../images/fondo_madera.jpg');
+	background-repeat: no-repeat,repeat;
+	background-position: 98% 50%,0 0;
+}
+
+body.form #page{
+	background: none;
+
+}
+
+body.form #content{
+	padding: 0 0 0 30px;
+}
 
 body.form .labelForm{
 	display: inline;
@@ -139,7 +154,7 @@ span.required{
 	display: none;
 }
 
-input.hasDatepicker+img{
+input.hasDatepicker{
 	
 	clear: both;
 	display: block;
@@ -156,10 +171,14 @@ body.form input[type='text'], body.form input[type='password']{
 	max-width: 200px;
 	height: 30px;
 	border-radius: 5px;
+	-moz-box-shadow: 3px 5px 11px #000000;
+	-webkit-box-shadow: 3px 5px 11px #000000;
+	box-shadow: 3px 5px 11px #000000;
+	background: url('../images/fileteBlanco60.png');
 }
-body.form label{
+body.form label, body.form a{
 
-	font-size: 1.1em;
+	font-size: 1.2em;
 } 
 
 body.form label{
@@ -173,6 +192,12 @@ body.form select{
 	height: 30px;
 	font-size: 1.2em;
 	display: block;
+	background: url('../images/fileteBlanco60.png');
+}
+
+body.form form select option{
+	background: url('../images/fileteBlanco60.png');
+
 }
 body.form .ingredientes  input[type='text'], body.form .ingredientes select {
 
@@ -189,15 +214,22 @@ body.form input[type='button'], body.form input[type='submit']{
 	height: 30px;
 	margin: 0 10px 0 0 ;
 	font-size: 1.2em;
+	border: 0;
+	color: #FFFFFF;
+	background: url('../images/filete80.png');
 }
 #labelIngredients{
 	display: block;
 }
 
-body.form.nuevaReceta textarea{
+body.form textarea{
 	
 	width: 50%;
 	max-width: 300px;
 	height: 150px;
 	font-size: 1.2em;
+	background: url('../images/fileteBlanco60.png');
+	-moz-box-shadow: 3px 5px 11px #000000;
+	-webkit-box-shadow: 3px 5px 11px #000000;
+	box-shadow: 3px 5px 11px #000000;
 }
