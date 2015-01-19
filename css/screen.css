@@ -207,7 +207,7 @@ th {
   color:#404237;
   letter-spacing: 1px;
 }
-}
+
 .enlaceSin{
 	text-decoration: none;
 }
@@ -342,4 +342,12 @@ th {
     padding: 10px;
   }
   /*fin receta*/	
+}
+
+@media screen and (min-width: 1200px) {
+  body.inicio{
+    background: url('../images/tablon.jpg'), url( '../images/nevera3.jpg'), url('../images/fondoHome.jpg');
+    background-repeat: no-repeat, no-repeat, repeat;
+    background-position: 55% 10%, 0 0, 0 0;
+  }
 }

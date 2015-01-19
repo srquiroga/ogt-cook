@@ -38,9 +38,9 @@
                                 array('label'=>'INICIO', 'url'=>array('site/index'), 'linkOptions'=>array('class'=>'w100 dBlock'), ),
 				array('label'=>'CONTACTO', 'url'=>array('site/contact',), 'linkOptions'=>array('class'=>'w100 dBlock'), ),
 				array('label'=>'REGISTRO', 'url'=>array('user/create'),'linkOptions'=>array('class'=>'w100 dBlock'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=> 'PERFIL', 'url'=>array('user/view/','id'=> yii::app()->user->id ),'linkOptions'=>array('class'=>'w100 dBlock'), 'visible'=>!Yii::app()->user->isGuest),
                                 array('label'=> 'RECETAS', 'url'=>array('recipe/index/'),'linkOptions'=>array('class'=>'w100 dBlock'), 'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'LOGIN', 'url'=>array('/site/login'), 'linkOptions'=>array('class'=>'w100 dBlock'), 'visible'=>Yii::app()->user->isGuest),
+				array('label'=> 'PERFIL', 'url'=>array('user/view/','id'=> yii::app()->user->id ),'linkOptions'=>array('class'=>'w100 dBlock'), 'visible'=>!Yii::app()->user->isGuest),
+                                array('label'=>'LOGIN', 'url'=>array('/site/login'), 'linkOptions'=>array('class'=>'w100 dBlock'), 'visible'=>Yii::app()->user->isGuest),
                                 array('label'=>'PANEL DE CONTROL', 'url'=>array('/user/admin'), 'linkOptions'=>array('class'=>'w100 dBlock'), 'visible'=>Yii::app()->user->id==1),
 				array('label'=>'LOGOUT ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'linkOptions'=>array('class'=>'w100 dBlock'), 'visible'=>!Yii::app()->user->isGuest)
 			),

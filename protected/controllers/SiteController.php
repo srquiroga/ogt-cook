@@ -106,6 +106,11 @@ class SiteController extends Controller {
        
         $this->render('login', array('model' => $model));
     }
+    
+    public function actionSitemap(){
+		header('Content-Type: application/xml; charset=utf-8');
+		$this->renderPartial('sitemap');
+	}
 
    
     public function actionLogout() {

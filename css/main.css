@@ -267,7 +267,7 @@ div.search-form
 }
 
 /*INICIO*/
-body.inicio{
+ .inicio{
 	background: url( '../images/nevera3.jpg'), url('../images/fondoHome.jpg');
 	background-repeat: no-repeat, repeat;
 
@@ -359,10 +359,17 @@ body.inicio #sidebar{
 
 body.perfilUsuario{
 	
-	background: url( '../images/cavernicola.png'), url('../images/fondo-user.jpg');
-	background-repeat: no-repeat, repeat-x;
-	background-position: 900px 450px, 0 0 ;
+	background: url('../images/fondo-user.jpg');
+	
+}
 
+body.perfilUsuario #avatar{
+	width: 500px;
+	height: 430px;
+	background: url('../images/troglo1.png');
+	background-repeat: no-repeat;
+	display: block;
+	float: right;
 }
 body.perfilUsuario h1 a, body.perfilUsuario h2, body.perfilUsuario p{
 	

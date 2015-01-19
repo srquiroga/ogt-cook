@@ -42,3 +42,9 @@ $this->menu=array(
     </table>
     
 </div>
+
+<div id='avatar'>
+    
+    
+</div>
+

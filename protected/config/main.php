@@ -41,6 +41,7 @@ return array(
                                 '/lista-recetas'=>'recipe/index',
                                 '/recetas/busqueda-avanzada'=>'recipe/admin',
                                 '/receta/id '=>'recipe/view',
+                                '/sitemap' => array('site/sitemap', 'urlSuffix' => '.xml'),
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
